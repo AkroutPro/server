@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 const userRoutes = require('./routes/userRoutes');
 const sequelize = require('./config/database');
-
+const cors = require('cors');
+// Enable CORS for all routes
+app.use(cors());
 // Middleware
 app.use(express.json());
 app.use('/api', userRoutes);
