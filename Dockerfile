@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 3001
 
 # Start the server
-CMD ["node", "server.js"]
+CMD ["npm run build", "npm run start:prod"]
